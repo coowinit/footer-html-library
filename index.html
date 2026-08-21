@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EVODEK footer HTML component preview">
+  <title>EVODEK Footer Preview</title>
+  <style>
+    :root {
+      --bg: #f6f8fa;
+      --card: #ffffff;
+      --text: #1f2328;
+      --muted: #656d76;
+      --line: #d0d7de;
+      --accent: #0969da;
+      --shadow: 0 8px 30px rgba(140,149,159,.15);
+      --max: 1480px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { -webkit-text-size-adjust: 100%; }
+
+    body {
+      margin: 0;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .page-header {
+      background: #0d1117;
+      color: #fff;
+    }
+
+    .page-header__inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 56px 28px 50px;
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: #8c959f;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(32px, 5vw, 56px);
+      line-height: 1.05;
+      letter-spacing: -.04em;
+    }
+
+    .intro {
+      max-width: 680px;
+      margin: 18px 0 0;
+      color: #b1bac4;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .page-main {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 42px 28px 70px;
+    }
+
+    .preview-card {
+      overflow: hidden;
+      margin-bottom: 34px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--card);
+      box-shadow: var(--shadow);
+    }
+
+    .preview-card__head {
+      min-height: 78px;
+      padding: 18px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .preview-card__title-wrap {
+      min-width: 0;
+    }
+
+    .preview-card__title {
+      margin: 0;
+      font-size: 19px;
+      line-height: 1.35;
+    }
+
+    .preview-card__meta {
+      margin: 5px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .preview-card__actions {
+      display: flex;
+      flex: 0 0 auto;
+      gap: 10px;
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 38px;
+      padding: 0 14px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: #fff;
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 600;
+      transition: border-color .2s ease, background-color .2s ease;
+    }
+
+    .button:hover {
+      border-color: #8c959f;
+      background: #f6f8fa;
+    }
+
+    .button--primary {
+      border-color: var(--accent);
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .button--primary:hover {
+      border-color: #0860ca;
+      background: #0860ca;
+    }
+
+    .preview-frame-wrap {
+      position: relative;
+      background: #fff;
+    }
+
+    .preview-frame {
+      display: block;
+      width: 100%;
+      height: 485px;
+      border: 0;
+      background: #fff;
+    }
+
+    .preview-card--compact .preview-frame {
+      height: 420px;
+    }
+
+    .page-footer {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 28px 40px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .page-footer p {
+      margin: 0;
+    }
+
+    @media (max-width: 720px) {
+      .page-header__inner {
+        padding: 40px 20px 36px;
+      }
+
+      .page-main {
+        padding: 24px 14px 48px;
+      }
+
+      .preview-card {
+        margin-bottom: 22px;
+        border-radius: 10px;
+      }
+
+      .preview-card__head {
+        min-height: auto;
+        padding: 16px;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .preview-card__actions {
+        width: 100%;
+      }
+
+      .button {
+        flex: 1;
+      }
+
+      .preview-frame,
+      .preview-card--compact .preview-frame {
+        height: 650px;
+      }
+
+      .page-footer {
+        padding: 0 20px 30px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="page-header">
+    <div class="page-header__inner">
+      <p class="eyebrow">EVODEK UI Components</p>
+      <h1>Footer Preview</h1>
+      <p class="intro">
+        Two independent footer layouts for desktop and mobile. Each version lives in its own
+        directory and can be opened separately or previewed directly below.
+      </p>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <section class="preview-card">
+      <div class="preview-card__head">
+        <div class="preview-card__title-wrap">
+          <h2 class="preview-card__title">Footer 01</h2>
+          <p class="preview-card__meta">Modern dark layout · 4 navigation columns · mobile accordion</p>
+        </div>
+        <div class="preview-card__actions">
+          <a class="button" href="footer-01/">Open</a>
+          <a class="button button--primary" href="footer-01/" target="_blank" rel="noopener">New tab ↗</a>
+        </div>
+      </div>
+      <div class="preview-frame-wrap">
+        <iframe
+          class="preview-frame"
+          src="footer-01/"
+          title="EVODEK Footer 01 preview"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </section>
+
+    <section class="preview-card preview-card--compact">
+      <div class="preview-card__head">
+        <div class="preview-card__title-wrap">
+          <h2 class="preview-card__title">Footer 02</h2>
+          <p class="preview-card__meta">Classic EVODEK layout · contact block · certification marks · mobile accordion</p>
+        </div>
+        <div class="preview-card__actions">
+          <a class="button" href="footer-02/">Open</a>
+          <a class="button button--primary" href="footer-02/" target="_blank" rel="noopener">New tab ↗</a>
+        </div>
+      </div>
+      <div class="preview-frame-wrap">
+        <iframe
+          class="preview-frame"
+          src="footer-02/"
+          title="EVODEK Footer 02 preview"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <p>Static HTML/CSS/JS project · ready for GitHub Pages.</p>
+  </footer>
+</body>
+</html>
