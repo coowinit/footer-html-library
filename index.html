@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="EVODEK footer HTML component preview">
-  <title>EVODEK Footer Preview</title>
+  <meta name="description" content="Footer HTML 设计方案库">
+  <title>Footer HTML Library</title>
   <style>
     :root {
       --bg: #f6f8fa;
@@ -18,7 +18,6 @@
     }
 
     * { box-sizing: border-box; }
-
     html { -webkit-text-size-adjust: 100%; }
 
     body {
@@ -58,7 +57,7 @@
     }
 
     .intro {
-      max-width: 680px;
+      max-width: 760px;
       margin: 18px 0 0;
       color: #b1bac4;
       font-size: 16px;
@@ -90,9 +89,7 @@
       border-bottom: 1px solid var(--line);
     }
 
-    .preview-card__title-wrap {
-      min-width: 0;
-    }
+    .preview-card__title-wrap { min-width: 0; }
 
     .preview-card__title {
       margin: 0;
@@ -144,11 +141,6 @@
       background: #0860ca;
     }
 
-    .preview-frame-wrap {
-      position: relative;
-      background: #fff;
-    }
-
     .preview-frame {
       display: block;
       width: 100%;
@@ -157,9 +149,8 @@
       background: #fff;
     }
 
-    .preview-card--compact .preview-frame {
-      height: 420px;
-    }
+    .preview-card--compact .preview-frame { height: 420px; }
+    .preview-card--brand .preview-frame { height: 430px; }
 
     .page-footer {
       max-width: var(--max);
@@ -169,23 +160,10 @@
       font-size: 13px;
     }
 
-    .page-footer p {
-      margin: 0;
-    }
-
     @media (max-width: 720px) {
-      .page-header__inner {
-        padding: 40px 20px 36px;
-      }
-
-      .page-main {
-        padding: 24px 14px 48px;
-      }
-
-      .preview-card {
-        margin-bottom: 22px;
-        border-radius: 10px;
-      }
+      .page-header__inner { padding: 40px 20px 36px; }
+      .page-main { padding: 24px 14px 48px; }
+      .preview-card { margin-bottom: 22px; border-radius: 10px; }
 
       .preview-card__head {
         min-height: auto;
@@ -194,87 +172,79 @@
         flex-direction: column;
       }
 
-      .preview-card__actions {
-        width: 100%;
-      }
-
-      .button {
-        flex: 1;
-      }
+      .preview-card__actions { width: 100%; }
+      .button { flex: 1; }
 
       .preview-frame,
-      .preview-card--compact .preview-frame {
-        height: 650px;
+      .preview-card--compact .preview-frame,
+      .preview-card--brand .preview-frame {
+        height: 720px;
       }
 
-      .page-footer {
-        padding: 0 20px 30px;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { transition: none !important; }
+      .page-footer { padding: 0 20px 30px; }
     }
   </style>
 </head>
 <body>
   <header class="page-header">
     <div class="page-header__inner">
-      <p class="eyebrow">EVODEK UI Components</p>
-      <h1>Footer Preview</h1>
+      <p class="eyebrow">FOOTER HTML LIBRARY</p>
+      <h1>网站 Footer 设计方案库</h1>
       <p class="intro">
-        Two independent footer layouts for desktop and mobile. Each version lives in its own
-        directory and can be opened separately or previewed directly below.
+        多套独立的响应式 Footer HTML 方案。每套方案分别管理 HTML、CSS、JavaScript 和图片资源，
+        可独立打开，也可以直接在此页面进行对比预览。
       </p>
     </div>
   </header>
 
   <main class="page-main">
+
     <section class="preview-card">
       <div class="preview-card__head">
         <div class="preview-card__title-wrap">
-          <h2 class="preview-card__title">Footer 01</h2>
-          <p class="preview-card__meta">Modern dark layout · 4 navigation columns · mobile accordion</p>
+          <h2 class="preview-card__title">Footer 01 · 现代导航型</h2>
+          <p class="preview-card__meta">品牌简介 + 四列导航 · 简洁现代 · 手机端折叠</p>
         </div>
         <div class="preview-card__actions">
-          <a class="button" href="footer-01/">Open</a>
-          <a class="button button--primary" href="footer-01/" target="_blank" rel="noopener">New tab ↗</a>
+          <a class="button" href="footer-01/">打开</a>
+          <a class="button button--primary" href="footer-01/" target="_blank" rel="noopener">新窗口 ↗</a>
         </div>
       </div>
-      <div class="preview-frame-wrap">
-        <iframe
-          class="preview-frame"
-          src="footer-01/"
-          title="EVODEK Footer 01 preview"
-          loading="lazy"
-        ></iframe>
-      </div>
+      <iframe class="preview-frame" src="footer-01/" title="Footer 01 预览" loading="lazy"></iframe>
     </section>
 
     <section class="preview-card preview-card--compact">
       <div class="preview-card__head">
         <div class="preview-card__title-wrap">
-          <h2 class="preview-card__title">Footer 02</h2>
-          <p class="preview-card__meta">Classic EVODEK layout · contact block · certification marks · mobile accordion</p>
+          <h2 class="preview-card__title">Footer 02 · 企业信息型</h2>
+          <p class="preview-card__meta">联系方式 + 企业导航 + 品牌介绍 + 认证背书</p>
         </div>
         <div class="preview-card__actions">
-          <a class="button" href="footer-02/">Open</a>
-          <a class="button button--primary" href="footer-02/" target="_blank" rel="noopener">New tab ↗</a>
+          <a class="button" href="footer-02/">打开</a>
+          <a class="button button--primary" href="footer-02/" target="_blank" rel="noopener">新窗口 ↗</a>
         </div>
       </div>
-      <div class="preview-frame-wrap">
-        <iframe
-          class="preview-frame"
-          src="footer-02/"
-          title="EVODEK Footer 02 preview"
-          loading="lazy"
-        ></iframe>
-      </div>
+      <iframe class="preview-frame" src="footer-02/" title="Footer 02 预览" loading="lazy"></iframe>
     </section>
+
+    <section class="preview-card preview-card--brand">
+      <div class="preview-card__head">
+        <div class="preview-card__title-wrap">
+          <h2 class="preview-card__title">Footer 03 · 简洁品牌型</h2>
+          <p class="preview-card__meta">品牌简介 + 精简导航 + 社媒与认证 · 更紧凑、更克制</p>
+        </div>
+        <div class="preview-card__actions">
+          <a class="button" href="footer-03/">打开</a>
+          <a class="button button--primary" href="footer-03/" target="_blank" rel="noopener">新窗口 ↗</a>
+        </div>
+      </div>
+      <iframe class="preview-frame" src="footer-03/" title="Footer 03 预览" loading="lazy"></iframe>
+    </section>
+
   </main>
 
   <footer class="page-footer">
-    <p>Static HTML/CSS/JS project · ready for GitHub Pages.</p>
+    <p>静态 HTML / CSS / JavaScript 项目，可直接部署到 GitHub Pages。</p>
   </footer>
 </body>
 </html>

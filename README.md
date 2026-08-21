@@ -6,6 +6,7 @@
 
 - `footer-01`：现代深色风格 Footer
 - `footer-02`：经典 EVODEK 风格 Footer
+- `footer-03`：简洁高端品牌型 Footer
 
 根目录提供统一的 `index.html` 预览页面，可同时查看两套 Footer，并可单独进入每个目录进行完整预览。
 
@@ -20,6 +21,7 @@
 - 根目录：Footer 总览页面
 - `/footer-01/`：第一套 Footer
 - `/footer-02/`：第二套 Footer
+- `/footer-03/`：第三套 Footer
 
 例如：
 
@@ -27,6 +29,7 @@
 https://yourname.github.io/your-repository/
 https://yourname.github.io/your-repository/footer-01/
 https://yourname.github.io/your-repository/footer-02/
+https://yourname.github.io/your-repository/footer-03/
 ```
 
 ---
@@ -175,6 +178,44 @@ images/icon-cert.png
 - `WHAT WE DO` 默认折叠
 - 点击标题右侧 `+` 展开
 - 点击 `−` 收起
+
+---
+
+# Footer 03
+
+## 设计定位
+
+`footer-03` 定位为 **简洁高端品牌型 Footer**。
+
+与前两套相比，这一版进一步减少信息量和视觉占用，不再设置大型 CTA 区块，重点保留品牌、核心导航、社交媒体和认证背书。
+
+主要结构：
+
+- EVODEK Logo
+- 简短品牌介绍
+- Products / Resources / Company / Contact 四组精简导航
+- Facebook / LinkedIn / YouTube / Instagram
+- ISO / SGS / CE / FSC 认证背书
+- Privacy Policy / Terms / Cookie Policy
+
+视觉上采用两层深色结构：
+
+- 主体导航区：深灰
+- 版权与信任区：更深黑色
+
+整体高度更紧凑，更适合作为常规企业官网的底部区域。
+
+## 手机端
+
+当屏幕宽度小于或等于 `720px` 时：
+
+- EVODEK 品牌信息保持显示
+- 4 组导航默认折叠
+- 同一时间仅展开一组导航
+- 社媒与认证信息保持可见
+- 版权与政策链接保持显示
+
+这种方式在保留完整信息的同时，可以尽量减少手机端 Footer 的纵向长度。
 
 ---
 
@@ -572,5 +613,6 @@ GitHub Pages
 | --- | --- | --- |
 | `footer-01` | 现代深色多列 Footer | 是 |
 | `footer-02` | 经典 EVODEK Footer | 是 |
+| `footer-03` | 简洁高端品牌型 Footer | 是 |
 
 后续可以继续增加更多设计方案。
