@@ -2,13 +2,13 @@
 
 一套用于展示、比较和维护 **EVODEK 网站底部 Footer** 的静态前端方案库。
 
-项目目前收录 5 套相互独立的响应式 Footer。根目录提供统一预览页面，每套方案均可单独打开、测试和接入网站。全部代码采用原生 HTML、CSS 和 JavaScript 编写，不依赖 WordPress、Bootstrap、jQuery 或第三方 UI 框架。
+项目目前收录 6 套相互独立的响应式 Footer。根目录提供统一预览页面，每套方案均可单独打开、测试和接入网站。全部代码采用原生 HTML、CSS 和 JavaScript 编写，不依赖 WordPress、Bootstrap、jQuery 或第三方 UI 框架。
 
-> 当前重点方案：`footer-04` 和 `footer-05`。两者都使用一套 HTML 同时适配桌面端和移动端；前者适合多栏目平台型导航，后者适合需要品牌介绍和邮件订阅的深色企业Footer。
+> 当前重点方案：`footer-04`、`footer-05` 和 `footer-06`。三者都使用一套 HTML 同时适配桌面端和移动端，分别适合多栏目导航、品牌订阅和简洁企业信息展示。
 
 ## 项目特点
 
-- 5 套独立 Footer 设计，可集中对比预览
+- 6 套独立 Footer 设计，可集中对比预览
 - 桌面端、平板端和移动端响应式适配
 - 移动端导航支持展开和收起
 - 原生 HTML5、CSS3 和 Vanilla JavaScript
@@ -27,6 +27,7 @@
 | [`footer-03`](footer-03/) | 简洁高端品牌型 | 精简导航、社媒、认证、政策链接 | 同时只展开1组 | 信息量较少的品牌官网 |
 | [`footer-04`](footer-04/) | 统一响应式多栏目型 | 品牌信息、9组导航、社媒、认证 | 同时只展开1组 | 多产品、多资源的正式企业官网 |
 | [`footer-05`](footer-05/) | 深色品牌订阅型 | 品牌简介、原生订阅、5组导航、社媒 | 同时只展开1组 | 重视订阅转化的品牌官网 |
+| [`footer-06`](footer-06/) | 深色卡片企业型 | 品牌简介、快捷链接、联系方式、扩展入口、支付类型 | 同时只展开1组 | 信息清晰的企业官网或服务网站 |
 
 ## 在线预览
 
@@ -44,6 +45,7 @@ https://<GitHub用户名>.github.io/<仓库名>/footer-02/
 https://<GitHub用户名>.github.io/<仓库名>/footer-03/
 https://<GitHub用户名>.github.io/<仓库名>/footer-04/
 https://<GitHub用户名>.github.io/<仓库名>/footer-05/
+https://<GitHub用户名>.github.io/<仓库名>/footer-06/
 ```
 
 尚未部署时，可以直接打开根目录的 `index.html` 查看总览，或打开任一方案目录中的 `index.html` 查看单独预览。
@@ -52,7 +54,7 @@ https://<GitHub用户名>.github.io/<仓库名>/footer-05/
 
 ```text
 footer-html-library/
-├── index.html                 # 5套方案的统一预览页面
+├── index.html                 # 6套方案的统一预览页面
 ├── README.md                  # 项目总说明
 │
 ├── footer-01/
@@ -99,17 +101,31 @@ footer-html-library/
 │       ├── icon-cert.png
 │       └── icon-*.svg
 │
-└── footer-05/
+├── footer-05/
+│   ├── index.html
+│   ├── README.txt
+│   ├── css/footer.css
+│   ├── js/footer.js
+│   └── images/
+│       ├── evodek-logo.svg
+│       ├── icon-facebook.svg
+│       ├── icon-instagram.svg
+│       ├── icon-linkedin.svg
+│       └── icon-youtube.svg
+│
+└── footer-06/
     ├── index.html
     ├── README.txt
     ├── css/footer.css
     ├── js/footer.js
     └── images/
         ├── evodek-logo.svg
-        ├── icon-facebook.svg
-        ├── icon-instagram.svg
-        ├── icon-linkedin.svg
-        └── icon-youtube.svg
+        ├── icon-community.svg
+        ├── icon-video.svg
+        ├── icon-location.svg
+        ├── icon-mail.svg
+        ├── icon-clock.svg
+        └── icon-*.svg
 ```
 
 每套方案的 HTML、CSS、JavaScript 和图片资源均放在自己的目录内，修改一套方案不会影响其他方案。
@@ -186,6 +202,35 @@ Logo           Products       Applications    Resources   Company
 
 当前为可验证交互的原生演示表单，正式上线前必须连接实际邮件服务或WordPress表单处理接口。演示代码不会提交或保存邮件地址。
 
+## Footer 06：深色卡片企业架构
+
+`footer-06`采用圆角深色卡片，将品牌简介、快捷链接、联系方式和扩展入口组织为四个独立信息区。
+
+### 桌面端
+
+- 主内容使用四列CSS Grid
+- Quick Links内部使用两列Grid
+- 版权、支付类型和法律链接在底部三段对齐
+- 所有栏目保持展开，不依赖JavaScript完成桌面布局
+
+### 平板端
+
+- 四个信息区转换为两列Grid
+- 法律链接排列到付款类型下方
+- 所有内容仍保持展开
+
+### 手机端
+
+- 品牌Logo、简介和两个中性频道按钮保持可见
+- Quick Links、Contacts和Explore More默认收起
+- 同一时间只允许展开一个信息组
+- CSS Grid `0fr/1fr`完成平滑动画
+- JavaScript只切换状态、ARIA属性和`inert`
+
+### 中性图标
+
+Footer 06没有使用第三方平台、社交媒体或支付品牌Logo。所有入口图标和支付符号均为项目内的基础几何SVG，只作为结构演示。正式上线时应根据网站实际功能替换名称、链接和支付类型。
+
 ## 快速使用
 
 ### 方法一：直接查看
@@ -196,7 +241,7 @@ Logo           Products       Applications    Resources   Company
 index.html
 ```
 
-根目录页面会以 `iframe` 形式集中展示5套方案。
+根目录页面会以 `iframe` 形式集中展示6套方案。
 
 ### 方法二：单独使用某套方案
 
@@ -335,6 +380,7 @@ icon-youtube.svg
 | Footer 03 | `max-width: 720px` |
 | Footer 04 | `max-width: 767px` |
 | Footer 05 | `max-width: 767px` |
+| Footer 06 | `max-width: 767px` |
 
 将方案接入正式网站时，可以根据网站现有断点统一调整，但HTML、CSS和JavaScript中的断点应保持一致。
 
@@ -390,7 +436,7 @@ WordPress接入后仍应保持“一个菜单数据源”的原则，避免分�
 新增方案时建议遵循统一结构：
 
 ```text
-footer-05/
+footer-06/
 ├── index.html
 ├── README.txt
 ├── css/footer.css
@@ -458,6 +504,25 @@ GitHub Pages
 - 多网站项目的前端代码复用
 
 ## 版本记录
+
+### v1.3.0 — 2026-08-24
+
+- 新增 `footer-06` 深色圆角卡片式企业Footer
+- 桌面端采用品牌、快捷链接、联系方式和扩展入口四列布局
+- 平板端转换为两列布局，手机端转换为单开式折叠菜单
+- 增加版权、通用支付类型和法律链接三段式底栏
+- 使用真实按钮、ARIA属性、`inert`和CSS Grid折叠动画
+- 所有第三方平台、社交和支付品牌元素均替换为中性名称与原创几何SVG
+- 新增社区、视频、入口、联系方式和通用支付类型图标
+- 更新根目录总览页、方案对比、目录结构和响应式说明
+
+### v1.2.2 — 2026-08-24
+
+- 修复根目录总览页Footer预览底部残留白色空白
+- iframe高度改为直接读取 `.site-footer` 的真实底部位置
+- 移除 `documentElement.offsetHeight` 对原始固定高度的干扰
+- 删除预览框高度过渡，加载后立即贴合Footer实际高度
+- 保持5套Footer预览的自动高度和无内部滚动条效果
 
 ### v1.2.1 — 2026-08-24
 
