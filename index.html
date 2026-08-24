@@ -148,7 +148,6 @@
       overflow: hidden;
       border: 0;
       background: #fff;
-      transition: height .2s ease;
     }
 
     .preview-card--compact .preview-frame { height: 420px; }
@@ -301,12 +300,11 @@
         doc.body.style.overflow = "hidden";
 
         const updateHeight = () => {
-          const height = Math.ceil(Math.max(
-            doc.documentElement.scrollHeight,
-            doc.documentElement.offsetHeight,
-            doc.body.scrollHeight,
-            doc.body.offsetHeight
-          ));
+          const footer = doc.querySelector(".site-footer");
+
+          const height = footer
+            ? Math.ceil(footer.getBoundingClientRect().bottom)
+            : Math.ceil(doc.body.scrollHeight);
 
           if (height > 0) frame.style.height = `${height}px`;
         };
