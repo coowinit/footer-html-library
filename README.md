@@ -2,13 +2,13 @@
 
 一套用于展示、比较和维护 **EVODEK 网站底部 Footer** 的静态前端方案库。
 
-项目目前收录 4 套相互独立的响应式 Footer。根目录提供统一预览页面，每套方案均可单独打开、测试和接入网站。全部代码采用原生 HTML、CSS 和 JavaScript 编写，不依赖 WordPress、Bootstrap、jQuery 或第三方 UI 框架。
+项目目前收录 5 套相互独立的响应式 Footer。根目录提供统一预览页面，每套方案均可单独打开、测试和接入网站。全部代码采用原生 HTML、CSS 和 JavaScript 编写，不依赖 WordPress、Bootstrap、jQuery 或第三方 UI 框架。
 
-> 当前重点方案：`footer-04`。它使用一套 HTML 同时适配桌面端和移动端，避免维护两份重复菜单，适合作为后续 WordPress Footer 模板的结构基础。
+> 当前重点方案：`footer-04` 和 `footer-05`。两者都使用一套 HTML 同时适配桌面端和移动端；前者适合多栏目平台型导航，后者适合需要品牌介绍和邮件订阅的深色企业Footer。
 
 ## 项目特点
 
-- 4 套独立 Footer 设计，可集中对比预览
+- 5 套独立 Footer 设计，可集中对比预览
 - 桌面端、平板端和移动端响应式适配
 - 移动端导航支持展开和收起
 - 原生 HTML5、CSS3 和 Vanilla JavaScript
@@ -26,6 +26,7 @@
 | [`footer-02`](footer-02/) | 经典企业信息型 | 联系方式、企业导航、公司介绍、认证 | 2个主要区块折叠 | 企业官网或原站风格延续 |
 | [`footer-03`](footer-03/) | 简洁高端品牌型 | 精简导航、社媒、认证、政策链接 | 同时只展开1组 | 信息量较少的品牌官网 |
 | [`footer-04`](footer-04/) | 统一响应式多栏目型 | 品牌信息、9组导航、社媒、认证 | 同时只展开1组 | 多产品、多资源的正式企业官网 |
+| [`footer-05`](footer-05/) | 深色品牌订阅型 | 品牌简介、原生订阅、5组导航、社媒 | 同时只展开1组 | 重视订阅转化的品牌官网 |
 
 ## 在线预览
 
@@ -42,6 +43,7 @@ https://<GitHub用户名>.github.io/<仓库名>/footer-01/
 https://<GitHub用户名>.github.io/<仓库名>/footer-02/
 https://<GitHub用户名>.github.io/<仓库名>/footer-03/
 https://<GitHub用户名>.github.io/<仓库名>/footer-04/
+https://<GitHub用户名>.github.io/<仓库名>/footer-05/
 ```
 
 尚未部署时，可以直接打开根目录的 `index.html` 查看总览，或打开任一方案目录中的 `index.html` 查看单独预览。
@@ -50,7 +52,7 @@ https://<GitHub用户名>.github.io/<仓库名>/footer-04/
 
 ```text
 footer-html-library/
-├── index.html                 # 4套方案的统一预览页面
+├── index.html                 # 5套方案的统一预览页面
 ├── README.md                  # 项目总说明
 │
 ├── footer-01/
@@ -87,14 +89,23 @@ footer-html-library/
 │       ├── icon-cert.png
 │       └── icon-*.svg
 │
-└── footer-04/
+├── footer-04/
+│   ├── index.html
+│   ├── README.txt
+│   ├── css/footer.css
+│   ├── js/footer.js
+│   └── images/
+│       ├── evodek-logo.svg
+│       ├── icon-cert.png
+│       └── icon-*.svg
+│
+└── footer-05/
     ├── index.html
     ├── README.txt
     ├── css/footer.css
     ├── js/footer.js
     └── images/
         ├── evodek-logo.svg
-        ├── icon-cert.png
         ├── icon-facebook.svg
         ├── icon-instagram.svg
         ├── icon-linkedin.svg
@@ -146,6 +157,35 @@ Logo           Products       Applications    Resources   Company
 - 重复内容增加维护成本
 - 页面中出现不必要的重复导航
 
+## Footer 05：深色品牌订阅架构
+
+`footer-05` 借鉴平台型网站“左侧品牌与订阅、右侧多列导航”的大框架，所有HTML、CSS和JavaScript均针对EVODEK重新设计。
+
+### 桌面端
+
+- 最大内容宽度为 `1728px`
+- 左侧为Logo、社媒、品牌简介、原生订阅表单和版权信息
+- 右侧最大约占55%，使用3列导航承载5组栏目
+- 不依赖Elementor、外部表单iframe或第三方UI框架
+
+### 平板端
+
+- 品牌区排列在上方
+- 3列导航排列在下方
+- 所有导航链接保持展开
+
+### 移动端
+
+- 品牌介绍和订阅表单优先显示
+- 5组导航在品牌区下方转换为Accordion
+- 同一时间只展开1组菜单
+- 展开内容采用两列链接布局
+- CSS Grid `0fr/1fr`负责动画，JavaScript只管理状态和ARIA属性
+
+### 订阅表单
+
+当前为可验证交互的原生演示表单，正式上线前必须连接实际邮件服务或WordPress表单处理接口。演示代码不会提交或保存邮件地址。
+
 ## 快速使用
 
 ### 方法一：直接查看
@@ -156,7 +196,7 @@ Logo           Products       Applications    Resources   Company
 index.html
 ```
 
-根目录页面会以 `iframe` 形式集中展示4套方案。
+根目录页面会以 `iframe` 形式集中展示5套方案。
 
 ### 方法二：单独使用某套方案
 
@@ -294,6 +334,7 @@ icon-youtube.svg
 | Footer 02 | `max-width: 720px` |
 | Footer 03 | `max-width: 720px` |
 | Footer 04 | `max-width: 767px` |
+| Footer 05 | `max-width: 767px` |
 
 将方案接入正式网站时，可以根据网站现有断点统一调整，但HTML、CSS和JavaScript中的断点应保持一致。
 
@@ -417,6 +458,27 @@ GitHub Pages
 - 多网站项目的前端代码复用
 
 ## 版本记录
+
+### v1.2.1 — 2026-08-24
+
+- 精修 Footer 05 手机端导航菜单
+- 为折叠内容增加独立动画内层，确保收起高度完全归零
+- 统一菜单标题高度、分隔线密度和展开内容上下留白
+- 优化展开后双列链接的行距、列间距和可读性
+- 使用单一CSS边框箭头替代双线段图标
+- 修正箭头在关闭、展开和键盘聚焦状态下的视觉对齐
+
+### v1.2.0 — 2026-08-24
+
+- 新增 `footer-05` 深色品牌订阅型方案
+- 采用品牌订阅区与3列导航的桌面布局
+- 增加平板端上下结构和手机端5组单开折叠菜单
+- 使用一套HTML同时适配桌面、平板和手机
+- 使用真实按钮、ARIA属性及 `inert` 管理折叠状态和焦点
+- 使用CSS Grid `0fr/1fr`完成平滑展开动画
+- 新增原生邮件订阅演示表单，移除外部iframe依赖
+- 复用现有Logo和社交媒体SVG资源
+- 更新根目录总览页、方案对比、目录结构和使用说明
 
 ### v1.1.2 — 2026-08-24
 
