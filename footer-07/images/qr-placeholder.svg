@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" shape-rendering="crispEdges">
+  <rect width="120" height="120" rx="6" fill="#fff"/>
+  <g fill="#343638">
+    <path d="M6 6h32v32H6V6Zm6 6v20h20V12H12Zm5 5h10v10H17V17ZM82 6h32v32H82V6Zm6 6v20h20V12H88Zm5 5h10v10H93V17ZM6 82h32v32H6V82Zm6 6v20h20V88H12Zm5 5h10v10H17V93Z"/>
+    <path d="M46 8h8v8h-8zM60 8h8v8h-8zM46 22h8v8h-8zM60 30h8v8h-8zM72 18h8v8h-8zM44 44h8v8h-8zM58 44h8v8h-8zM72 44h8v8h-8zM86 46h8v8h-8zM100 44h8v8h-8zM8 46h8v8H8zM22 46h8v8h-8zM34 58h8v8h-8zM8 62h8v8H8zM20 70h8v8h-8zM46 58h8v8h-8zM72 58h8v8h-8zM86 60h8v8h-8zM102 58h8v8h-8zM44 72h8v8h-8zM58 70h8v8h-8zM72 74h8v8h-8zM86 76h8v8h-8zM100 72h8v8h-8zM46 88h8v8h-8zM58 84h8v8h-8zM72 88h8v8h-8zM86 90h8v8h-8zM102 86h8v8h-8zM44 102h8v8h-8zM60 100h8v8h-8zM74 104h8v8h-8zM90 104h8v8h-8zM104 100h8v8h-8z"/>
+  </g>
+  <rect x="52" y="52" width="16" height="16" rx="3" fill="#fff"/>
+  <text x="60" y="63" text-anchor="middle" font-family="Arial,sans-serif" font-size="7" font-weight="700" fill="#343638">QR</text>
+</svg>

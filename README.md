@@ -2,13 +2,13 @@
 
 一套用于展示、比较和维护 **EVODEK 网站底部 Footer** 的静态前端方案库。
 
-项目目前收录 6 套相互独立的响应式 Footer。根目录提供统一预览页面，每套方案均可单独打开、测试和接入网站。全部代码采用原生 HTML、CSS 和 JavaScript 编写，不依赖 WordPress、Bootstrap、jQuery 或第三方 UI 框架。
+项目目前收录 7 套相互独立的响应式 Footer。根目录提供统一预览页面，每套方案均可单独打开、测试和接入网站。全部代码采用原生 HTML、CSS 和 JavaScript 编写，不依赖 WordPress、Bootstrap、jQuery 或第三方 UI 框架。
 
-> 当前重点方案：`footer-04`、`footer-05` 和 `footer-06`。三者都使用一套 HTML 同时适配桌面端和移动端，分别适合多栏目导航、品牌订阅和简洁企业信息展示。
+> 当前重点方案：`footer-04`、`footer-05`、`footer-06` 和 `footer-07`。这些方案都使用一套 HTML 同时适配桌面端和移动端，覆盖多栏目导航、品牌订阅、企业信息和中文社群入口等场景。
 
 ## 项目特点
 
-- 6 套独立 Footer 设计，可集中对比预览
+- 7 套独立 Footer 设计，可集中对比预览
 - 桌面端、平板端和移动端响应式适配
 - 移动端导航支持展开和收起
 - 原生 HTML5、CSS3 和 Vanilla JavaScript
@@ -28,6 +28,7 @@
 | [`footer-04`](footer-04/) | 统一响应式多栏目型 | 品牌信息、9组导航、社媒、认证 | 同时只展开1组 | 多产品、多资源的正式企业官网 |
 | [`footer-05`](footer-05/) | 深色品牌订阅型 | 品牌简介、原生订阅、5组导航、社媒 | 同时只展开1组 | 重视订阅转化的品牌官网 |
 | [`footer-06`](footer-06/) | 深色卡片企业型 | 品牌简介、快捷链接、联系方式、扩展入口、支付类型 | 同时只展开1组 | 信息清晰的企业官网或服务网站 |
+| [`footer-07`](footer-07/) | 浅色中文社群型 | 品牌信息、中性频道入口、二维码占位、3组中文导航、备案栏 | 同时只展开1组 | 中文企业官网或社群型网站 |
 
 ## 在线预览
 
@@ -46,6 +47,7 @@ https://<GitHub用户名>.github.io/<仓库名>/footer-03/
 https://<GitHub用户名>.github.io/<仓库名>/footer-04/
 https://<GitHub用户名>.github.io/<仓库名>/footer-05/
 https://<GitHub用户名>.github.io/<仓库名>/footer-06/
+https://<GitHub用户名>.github.io/<仓库名>/footer-07/
 ```
 
 尚未部署时，可以直接打开根目录的 `index.html` 查看总览，或打开任一方案目录中的 `index.html` 查看单独预览。
@@ -54,7 +56,7 @@ https://<GitHub用户名>.github.io/<仓库名>/footer-06/
 
 ```text
 footer-html-library/
-├── index.html                 # 6套方案的统一预览页面
+├── index.html                 # 7套方案的统一预览页面
 ├── README.md                  # 项目总说明
 │
 ├── footer-01/
@@ -113,19 +115,33 @@ footer-html-library/
 │       ├── icon-linkedin.svg
 │       └── icon-youtube.svg
 │
-└── footer-06/
+├── footer-06/
+│   ├── index.html
+│   ├── README.txt
+│   ├── css/footer.css
+│   ├── js/footer.js
+│   └── images/
+│       ├── evodek-logo.svg
+│       ├── icon-community.svg
+│       ├── icon-video.svg
+│       ├── icon-location.svg
+│       ├── icon-mail.svg
+│       ├── icon-clock.svg
+│       └── icon-*.svg
+│
+└── footer-07/
     ├── index.html
     ├── README.txt
     ├── css/footer.css
     ├── js/footer.js
     └── images/
-        ├── evodek-logo.svg
+        ├── beianico.png
+        ├── foot-logo.svg
+        ├── qr-placeholder.svg
         ├── icon-community.svg
         ├── icon-video.svg
-        ├── icon-location.svg
-        ├── icon-mail.svg
-        ├── icon-clock.svg
-        └── icon-*.svg
+        ├── icon-document.svg
+        └── icon-broadcast.svg
 ```
 
 每套方案的 HTML、CSS、JavaScript 和图片资源均放在自己的目录内，修改一套方案不会影响其他方案。
@@ -231,6 +247,38 @@ Logo           Products       Applications    Resources   Company
 
 Footer 06没有使用第三方平台、社交媒体或支付品牌Logo。所有入口图标和支付符号均为项目内的基础几何SVG，只作为结构演示。正式上线时应根据网站实际功能替换名称、链接和支付类型。
 
+## Footer 07：浅色中文社群架构
+
+`footer-07`采用浅灰色主体和白色备案栏，将品牌说明、频道入口、二维码和中文导航集中在最大1200px内容区内。
+
+### 桌面端
+
+- 最大内容宽度为 `1200px`
+- 左侧为品牌文字、品牌说明、4个中性频道入口和二维码
+- 右侧为产品相关、服务支持和关于我们3组导航
+- 3组导航全部展开，不依赖JavaScript完成桌面布局
+- ICP和公安备案信息集中放在独立的白色底栏
+
+### 平板端
+
+- 继续保持左右布局
+- 品牌区和导航区使用弹性列宽
+- 缩小左右间距和导航组间距
+
+### 手机端
+
+- 品牌文字、说明、频道入口和二维码保持可见
+- 3组导航默认收起
+- 同一时间只允许展开1组菜单
+- 菜单使用真实按钮、ARIA属性、`inert`和CSS Grid动画
+- 备案信息转换为纵向居中排列
+
+### 二维码与备案信息
+
+`qr-placeholder.svg`是不可扫码的占位图，正式上线前必须替换为真实二维码。公安备案信息使用 `beianico.png`，ICP备案号和公安备案号均保留“请替换”提示，不包含其他网站的备案内容。
+
+Footer 07使用经过精简的 `foot-logo.svg` 替代原有文字Logo。优化后的文件移除了固定宽高、冗余Mask和展开描边路径，保留 `viewBox` 并使用 `currentColor`，方便在不同尺寸和颜色环境中复用。
+
 ## 快速使用
 
 ### 方法一：直接查看
@@ -241,7 +289,7 @@ Footer 06没有使用第三方平台、社交媒体或支付品牌Logo。所有�
 index.html
 ```
 
-根目录页面会以 `iframe` 形式集中展示6套方案。
+根目录页面会以 `iframe` 形式集中展示7套方案。
 
 ### 方法二：单独使用某套方案
 
@@ -381,6 +429,7 @@ icon-youtube.svg
 | Footer 04 | `max-width: 767px` |
 | Footer 05 | `max-width: 767px` |
 | Footer 06 | `max-width: 767px` |
+| Footer 07 | `max-width: 767px` |
 
 将方案接入正式网站时，可以根据网站现有断点统一调整，但HTML、CSS和JavaScript中的断点应保持一致。
 
@@ -436,7 +485,7 @@ WordPress接入后仍应保持“一个菜单数据源”的原则，避免分�
 新增方案时建议遵循统一结构：
 
 ```text
-footer-06/
+footer-07/
 ├── index.html
 ├── README.txt
 ├── css/footer.css
@@ -504,6 +553,31 @@ GitHub Pages
 - 多网站项目的前端代码复用
 
 ## 版本记录
+
+### v1.4.1 — 2026-08-24
+
+- 优化用户提供的 `foot-logo.svg` 矢量Logo
+- 移除SVG固定宽高，使Logo通过CSS响应式缩放
+- 将固定黑色填充改为 `currentColor`
+- 移除冗余Mask和展开描边路径，使用简洁描边箭头保持原有视觉
+- SVG由16个Path和1个Mask精简为14个Path，无Mask依赖
+- 文件体积由约15KB降低至约12KB
+- 使用优化后的SVG替换 Footer 07左侧文字Logo
+- 增加桌面端、手机端和小屏手机Logo尺寸规则
+- 更新 Footer 07说明文档、项目目录结构和版本记录
+
+### v1.4.0 — 2026-08-24
+
+- 新增 `footer-07` 浅色中文社群导航型方案
+- 桌面端采用最大1200px的品牌区与3列导航布局
+- 平板端保留左右结构并使用弹性列宽和紧凑间距
+- 手机端将3组导航转换为默认收起的单开式折叠菜单
+- 使用真实按钮、ARIA属性、`inert`和CSS Grid完成无障碍折叠交互
+- 新增不可扫码的 `qr-placeholder.svg` 二维码占位图
+- 使用用户提供的 `beianico.png` 作为公安备案图标
+- ICP和公安备案号码使用明确的“请替换”占位内容
+- 使用4个中性几何SVG替代第三方社交和内容平台图标
+- 更新根目录总览页、方案对比、目录结构和响应式说明
 
 ### v1.3.0 — 2026-08-24
 
