@@ -145,8 +145,10 @@
       display: block;
       width: 100%;
       height: 485px;
+      overflow: hidden;
       border: 0;
       background: #fff;
+      transition: height .2s ease;
     }
 
     .preview-card--compact .preview-frame { height: 420px; }
@@ -213,7 +215,7 @@
           <a class="button button--primary" href="footer-01/" target="_blank" rel="noopener">新窗口 ↗</a>
         </div>
       </div>
-      <iframe class="preview-frame" src="footer-01/" title="Footer 01 预览" loading="lazy"></iframe>
+      <iframe class="preview-frame" src="footer-01/" title="Footer 01 预览" loading="lazy" scrolling="no"></iframe>
     </section>
 
     <section class="preview-card preview-card--compact">
@@ -227,7 +229,7 @@
           <a class="button button--primary" href="footer-02/" target="_blank" rel="noopener">新窗口 ↗</a>
         </div>
       </div>
-      <iframe class="preview-frame" src="footer-02/" title="Footer 02 预览" loading="lazy"></iframe>
+      <iframe class="preview-frame" src="footer-02/" title="Footer 02 预览" loading="lazy" scrolling="no"></iframe>
     </section>
 
     <section class="preview-card preview-card--brand">
@@ -241,7 +243,7 @@
           <a class="button button--primary" href="footer-03/" target="_blank" rel="noopener">新窗口 ↗</a>
         </div>
       </div>
-      <iframe class="preview-frame" src="footer-03/" title="Footer 03 预览" loading="lazy"></iframe>
+      <iframe class="preview-frame" src="footer-03/" title="Footer 03 预览" loading="lazy" scrolling="no"></iframe>
     </section>
 
     <section class="preview-card preview-card--unified">
@@ -255,7 +257,7 @@
           <a class="button button--primary" href="footer-04/" target="_blank" rel="noopener">新窗口 ↗</a>
         </div>
       </div>
-      <iframe class="preview-frame" src="footer-04/" title="Footer 04 预览" loading="lazy"></iframe>
+      <iframe class="preview-frame" src="footer-04/" title="Footer 04 预览" loading="lazy" scrolling="no"></iframe>
     </section>
 
   </main>
@@ -263,5 +265,59 @@
   <footer class="page-footer">
     <p>静态 HTML / CSS / JavaScript 项目，可直接部署到 GitHub Pages。</p>
   </footer>
+
+  <script>
+    (() => {
+      "use strict";
+
+      const frames = document.querySelectorAll(".preview-frame");
+
+      const connectAutoHeight = (frame) => {
+        const doc = frame.contentDocument;
+        if (!doc || !doc.documentElement || !doc.body) return;
+
+        // The spacer belongs to each standalone demo page. The overview only
+        // needs the footer itself, so removing it keeps the comparison concise.
+        const demoSpace = doc.querySelector(".demo-space");
+        if (demoSpace) demoSpace.style.setProperty("display", "none", "important");
+
+        doc.documentElement.style.overflow = "hidden";
+        doc.body.style.overflow = "hidden";
+
+        const updateHeight = () => {
+          const height = Math.ceil(Math.max(
+            doc.documentElement.scrollHeight,
+            doc.documentElement.offsetHeight,
+            doc.body.scrollHeight,
+            doc.body.offsetHeight
+          ));
+
+          if (height > 0) frame.style.height = `${height}px`;
+        };
+
+        const scheduleUpdate = () => {
+          window.requestAnimationFrame(() => window.requestAnimationFrame(updateHeight));
+        };
+
+        const resizeObserver = new ResizeObserver(scheduleUpdate);
+        resizeObserver.observe(doc.documentElement);
+        resizeObserver.observe(doc.body);
+
+        const mutationObserver = new MutationObserver(scheduleUpdate);
+        mutationObserver.observe(doc.body, {
+          attributes: true,
+          childList: true,
+          subtree: true
+        });
+
+        if (doc.fonts && doc.fonts.ready) doc.fonts.ready.then(scheduleUpdate);
+        scheduleUpdate();
+      };
+
+      frames.forEach((frame) => {
+        frame.addEventListener("load", () => connectAutoHeight(frame));
+      });
+    })();
+  </script>
 </body>
 </html>
