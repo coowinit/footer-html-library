@@ -1,10 +1,10 @@
-EVODEK Footer 05
+ABCDE Footer 05
 
 定位：深色品牌订阅型 Footer。
 
 设计参考：
 - 借鉴平台型网站“左侧品牌与订阅、右侧多列导航”的大框架
-- 代码为EVODEK重新设计和编写，不复制Elementor生成的DOM或样式依赖
+- 代码为ABCDE重新设计和编写，不复制Elementor生成的DOM或样式依赖
 
 特点：
 - 桌面端：品牌订阅区 + 3列导航

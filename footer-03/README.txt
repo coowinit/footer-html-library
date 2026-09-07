@@ -1,9 +1,9 @@
-EVODEK Footer 03
+ABCDE Footer 03
 
 定位：简洁的高端品牌型 Footer。
 
 特点：
-- EVODEK Logo + 简短品牌介绍
+- ABCDE Logo + 简短品牌介绍
 - Products / Resources / Company / Contact 四组精简导航
 - 社交媒体图标
 - ISO / SGS / CE / FSC 认证标识

@@ -1,4 +1,4 @@
-EVODEK Footer 07
+ABCDE Footer 07
 
 定位：浅色中文社群导航型 Footer。
 

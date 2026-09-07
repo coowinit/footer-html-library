@@ -1,4 +1,4 @@
-EVODEK Footer 04
+ABCDE Footer 04
 
 定位：MEGA 式统一响应式企业导航 Footer。
 
@@ -10,7 +10,7 @@ EVODEK Footer 04
 - 移动端菜单默认收起，同一时间仅展开一组
 - 使用 button、aria-expanded、aria-controls 和 hidden 提升可访问性
 - JavaScript 失效时仍显示完整菜单
-- 复用 EVODEK Logo、社交媒体 SVG 和认证图片
+- 复用 ABCDE Logo、社交媒体 SVG 和认证图片
 - 原生 HTML / CSS / JavaScript，无第三方依赖
 
 正式接入前：

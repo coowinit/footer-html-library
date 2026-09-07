@@ -1,6 +1,6 @@
-# EVODEK Footer HTML 设计方案库
+# ABCDE Footer HTML 设计方案库
 
-一套用于展示、比较和维护 **EVODEK 网站底部 Footer** 的静态前端方案库。
+一套用于展示、比较和维护 **ABCDE 网站底部 Footer** 的静态前端方案库。
 
 项目目前收录 7 套相互独立的响应式 Footer。根目录提供统一预览页面，每套方案均可单独打开、测试和接入网站。全部代码采用原生 HTML、CSS 和 JavaScript 编写，不依赖 WordPress、Bootstrap、jQuery 或第三方 UI 框架。
 
@@ -65,7 +65,7 @@ footer-html-library/
 │   ├── css/footer.css
 │   ├── js/footer.js
 │   └── images/
-│       ├── evodek-logo.svg
+│       ├── ABCDE-logo.svg
 │       ├── icon-facebook.svg
 │       ├── icon-instagram.svg
 │       ├── icon-linkedin.svg
@@ -77,7 +77,7 @@ footer-html-library/
 │   ├── css/footer.css
 │   ├── js/footer.js
 │   └── images/
-│       ├── evodek-logo.svg
+│       ├── ABCDE-logo.svg
 │       ├── icon-cert.png
 │       ├── icon-email.svg
 │       ├── icon-phone.svg
@@ -89,7 +89,7 @@ footer-html-library/
 │   ├── css/footer.css
 │   ├── js/footer.js
 │   └── images/
-│       ├── evodek-logo.svg
+│       ├── ABCDE-logo.svg
 │       ├── icon-cert.png
 │       └── icon-*.svg
 │
@@ -99,7 +99,7 @@ footer-html-library/
 │   ├── css/footer.css
 │   ├── js/footer.js
 │   └── images/
-│       ├── evodek-logo.svg
+│       ├── ABCDE-logo.svg
 │       ├── icon-cert.png
 │       └── icon-*.svg
 │
@@ -109,7 +109,7 @@ footer-html-library/
 │   ├── css/footer.css
 │   ├── js/footer.js
 │   └── images/
-│       ├── evodek-logo.svg
+│       ├── ABCDE-logo.svg
 │       ├── icon-facebook.svg
 │       ├── icon-instagram.svg
 │       ├── icon-linkedin.svg
@@ -121,7 +121,7 @@ footer-html-library/
 │   ├── css/footer.css
 │   ├── js/footer.js
 │   └── images/
-│       ├── evodek-logo.svg
+│       ├── ABCDE-logo.svg
 │       ├── icon-community.svg
 │       ├── icon-video.svg
 │       ├── icon-location.svg
@@ -148,7 +148,7 @@ footer-html-library/
 
 ## Footer 04：推荐架构
 
-`footer-04` 参考大型平台型网站的 Footer 信息架构，并针对 EVODEK 的产品、服务和企业内容进行了重新组织。
+`footer-04` 参考大型平台型网站的 Footer 信息架构，并针对 ABCDE 的产品、服务和企业内容进行了重新组织。
 
 ### 桌面端
 
@@ -191,7 +191,7 @@ Logo           Products       Applications    Resources   Company
 
 ## Footer 05：深色品牌订阅架构
 
-`footer-05` 借鉴平台型网站“左侧品牌与订阅、右侧多列导航”的大框架，所有HTML、CSS和JavaScript均针对EVODEK重新设计。
+`footer-05` 借鉴平台型网站“左侧品牌与订阅、右侧多列导航”的大框架，所有HTML、CSS和JavaScript均针对ABCDE重新设计。
 
 ### 桌面端
 
@@ -342,7 +342,7 @@ CSS、JavaScript和图片均使用相对路径，因此项目部署在 GitHub Pa
 当前页面链接主要用于结构演示，例如：
 
 ```html
-<a href="/about/">About EVODEK</a>
+<a href="/about/">About ABCDE</a>
 ```
 
 正式接入网站前，应根据网站实际页面结构统一核对和替换。
@@ -355,15 +355,15 @@ CSS、JavaScript和图片均使用相对路径，因此项目部署在 GitHub Pa
 href="#"
 ```
 
-请替换为 EVODEK 官方 Facebook、Instagram、LinkedIn 和 YouTube 地址，同时保留相应的 `aria-label`。
+请替换为 ABCDE 官方 Facebook、Instagram、LinkedIn 和 YouTube 地址，同时保留相应的 `aria-label`。
 
 ### 电话与邮箱
 
 `footer-02` 包含示例电话和邮箱：
 
 ```html
-<a href="tel:+61283111111">...</a>
-<a href="mailto:info@evodekco.com">...</a>
+<a href="tel:+6666888888">...</a>
+<a href="mailto:info@ABCDEco.com">...</a>
 ```
 
 上线前需要确认号码、邮箱、显示文本及国际区号是否正确。
@@ -376,7 +376,7 @@ href="#"
 - 公司简介
 - 产品和服务栏目名称
 - 版权主体与年份
-- EVODEK® 商标写法
+- ABCDE® 商标写法
 - 认证名称和替代文本
 
 ### 演示内容
@@ -390,7 +390,7 @@ href="#"
 各方案使用：
 
 ```text
-images/evodek-logo.svg
+images/ABCDE-logo.svg
 ```
 
 SVG具有清晰、体积小、适配Retina屏幕等优点。建议继续使用 `<img>` 引用，以获得浏览器缓存、替代文本和固有尺寸支持。
@@ -467,7 +467,7 @@ icon-youtube.svg
 版权年份示例：
 
 ```php
-&copy; <?php echo esc_html( wp_date( 'Y' ) ); ?> EVODEK&reg;.
+&copy; <?php echo esc_html( wp_date( 'Y' ) ); ?> ABCDE&reg;.
 ```
 
 导航链接输出时应使用WordPress转义函数，例如：
@@ -545,7 +545,7 @@ GitHub Pages
 
 ## 项目用途
 
-- EVODEK Footer UI方案预览
+- ABCDE Footer UI方案预览
 - 不同Footer结构的内部评审与对比
 - 网站Footer设计归档
 - GitHub Pages在线展示
@@ -652,4 +652,4 @@ GitHub Pages
 
 ## 使用说明
 
-本项目当前作为 EVODEK 网站内部设计与开发参考资料使用。如需公开分发、商业授权或第三方复用，建议在仓库中补充明确的 `LICENSE` 文件，并确认Logo、商标、认证图标和品牌内容的使用权限。
+本项目当前作为 ABCDE 网站内部设计与开发参考资料使用。如需公开分发、商业授权或第三方复用，建议在仓库中补充明确的 `LICENSE` 文件，并确认Logo、商标、认证图标和品牌内容的使用权限。

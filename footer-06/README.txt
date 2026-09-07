@@ -1,4 +1,4 @@
-EVODEK Footer 06
+ABCDE Footer 06
 
 定位：深色圆角卡片式企业信息 Footer。
 
