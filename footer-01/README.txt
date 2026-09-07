@@ -8,7 +8,7 @@ Structure:
 - images/icon-instagram.svg
 - images/icon-linkedin.svg
 - images/icon-youtube.svg
-- images/ABCDE-logo.svg
+- images/EVODEK-logo.svg
 
 Notes:
 1. The four SVG icons were normalized to a shared 24x24 viewBox and reusable currentColor markup.

@@ -4,7 +4,7 @@ Files:
 - index.html
 - css/footer.css
 - js/footer.js
-- images/ABCDE-logo.svg
+- images/EVODEK-logo.svg
 - images/icon-facebook.svg
 - images/icon-instagram.svg
 - images/icon-linkedin.svg
